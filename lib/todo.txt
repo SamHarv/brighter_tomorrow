@@ -1,0 +1,5 @@
+To do:
+- Add Josh & Jas about pages to appbar on wide view
+- Setup domain
+- Change email over to business email
+- Add phone when Jas ready
