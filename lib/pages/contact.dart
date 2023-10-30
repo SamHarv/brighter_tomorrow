@@ -76,7 +76,8 @@ class ContactPage extends StatelessWidget {
                     Padding(
                       padding: kPadding,
                       child: Text(
-                        'Jas Morrow\n\n'
+                        'Jas Saunders\n\n'
+                        // morrow
                         'Brighter Tomorrow',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.newsreader(

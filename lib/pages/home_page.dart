@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(32),
                     child: Text(
                       'Welcome to Brighter Tomorrow Exercise Physiology, a '
-                      'service started by Jas Morrow to offer high '
+                      'service started by Jas Saunders to offer high '
                       'quality, personalised Exercise Physiology in the Albury/'
                       'Wodonga area.\n\n'
                       'At Brighter Tomorrow we prioritise our relationships with '
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
                       'very best out of life. Whether that means feeling more '
                       'confident in your ability to get up and down out of a '
                       'chair, or you are striving for success at elite level in '
-                      'sports, we will deliver a thoughtful and tailored '
+                      'sports, we provide a thoughtful and tailored '
                       'approach.',
                       style: GoogleFonts.newsreader(
                         textStyle: bodyStyle,

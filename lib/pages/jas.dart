@@ -10,6 +10,7 @@ class Jas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double mediaWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       drawer: appDrawer,
       appBar: const CustomAppBar(),
@@ -43,11 +44,30 @@ class Jas extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(32, 32, 32, 0),
+                      padding: const EdgeInsets.fromLTRB(32, 32, 32, 32),
                       child: Image.asset(
                         'images/jas.jpeg',
                         fit: BoxFit.contain,
                         height: 400.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'images/cooper.jpeg',
+                            fit: BoxFit.contain,
+                            height: 200.0,
+                          ),
+                          const SizedBox(width: 32),
+                          Image.asset(
+                            'images/odie.jpeg',
+                            fit: BoxFit.contain,
+                            height: 200.0,
+                          ),
+                        ],
                       ),
                     ),
                     Padding(
@@ -68,7 +88,7 @@ class Jas extends StatelessWidget {
                         'a large allied health clinic. Currently Jas also works in '
                         'the speciality area of child and adolescent mental '
                         'health.\n\n'
-                        'Although it might sounds cliche\' seeing positive changes '
+                        'Although it might sound cliche\' seeing positive changes '
                         'to people\'s lives is what continues to drive Jas\' '
                         'passion for Exercise Physiology. She prides herself on '
                         'being adaptable to always ensures that her prescription '
@@ -86,6 +106,53 @@ class Jas extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Padding(
+                        padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
+                        child: mediaWidth > 740
+                            ? Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'images/horse.jpeg',
+                                    fit: BoxFit.contain,
+                                    height: 200.0,
+                                  ),
+                                  const SizedBox(width: 32),
+                                  Image.asset(
+                                    'images/fire.jpeg',
+                                    fit: BoxFit.contain,
+                                    height: 200.0,
+                                  ),
+                                  const SizedBox(width: 32),
+                                  Image.asset(
+                                    'images/bicycle.jpeg',
+                                    fit: BoxFit.contain,
+                                    height: 200.0,
+                                  ),
+                                ],
+                              )
+                            : Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'images/horse.jpeg',
+                                    fit: BoxFit.contain,
+                                    height: 200.0,
+                                  ),
+                                  const SizedBox(height: 32),
+                                  Image.asset(
+                                    'images/fire.jpeg',
+                                    fit: BoxFit.contain,
+                                    height: 200.0,
+                                  ),
+                                  const SizedBox(height: 32),
+                                  Image.asset(
+                                    'images/bicycle.jpeg',
+                                    fit: BoxFit.contain,
+                                    height: 200.0,
+                                  ),
+                                ],
+                              )),
                   ],
                 ),
               ],

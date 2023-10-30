@@ -57,7 +57,7 @@ class AppDrawer extends StatelessWidget {
             ),
             const Divider(),
             buildListTile(
-              'About Us',
+              'About',
               Icons.people,
               () => Beamer.of(context).beamToNamed('/jas'),
             ),

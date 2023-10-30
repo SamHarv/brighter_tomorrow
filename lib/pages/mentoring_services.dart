@@ -37,7 +37,7 @@ class MentoringServices extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(32, 32, 32, 0),
                       child: Center(
                         child: Text(
-                          "Clinical Mentoring for EPs",
+                          "Clinical Mentoring for Exercise Physiologists",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.newsreader(
                             textStyle: headingStyle,
@@ -49,14 +49,15 @@ class MentoringServices extends StatelessWidget {
                       padding: const EdgeInsets.all(32),
                       child: Text(
                         'We know the journey from University to your first job as '
-                        'an AEP can be overwhelming at the best of times. Taking '
-                        'from experience, we have been there. We also know that '
-                        'the first few years provide great opportunity for growth, '
-                        'but adapting to the demands of clinical practise can '
+                        'an AEP can be overwhelming at the best of times. We '
+                        'speak from experience, we have been there. We also '
+                        'know that the first few years provide great '
+                        'opportunity for growth, but adapting to the demands '
+                        'of clinical practice can be '
                         'challenging and stressful.\n\n'
                         'We are so passionate about the difference Exercise '
-                        'Physiologists can make to the lives of the people they '
-                        'work with, and we are excited to offer our experience, '
+                        'Physiology can make to people\'s lives and we are '
+                        'excited to offer our experience, '
                         'enthusiasm and expertise to developing Exercise '
                         'Physiologists.\n\n'
                         'We are offering video mentoring services, meaning we can '
@@ -66,7 +67,7 @@ class MentoringServices extends StatelessWidget {
                         ' • Patient cases\n'
                         ' • Treatment plans\n'
                         ' • Exercise prescription\n'
-                        ' • Running successful group classes\n'
+                        ' • Running successful group class\n'
                         ' • Writing professional letters and reports\n'
                         ' • Building referral pathways and professional networks\n'
                         ' • Time management in private practice\n'
@@ -76,8 +77,9 @@ class MentoringServices extends StatelessWidget {
                         ' • Navigating when complex situations arise\n'
                         ' • Growth pathways as an EP\n\n'
                         'If you would like to find out more, please be in touch to '
-                        'organise a complimentary 15 minute introductory call with '
-                        'either Jas.',
+                        'organise a complimentary 15 minute introductory call.',
+                        // with '
+                        //'either Jas.',
                         // or Josh
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,

@@ -53,7 +53,9 @@ class EPServices extends StatelessWidget {
                         'who specialise in clinical exercise interventions, and '
                         'have the skills and knowledge to treat chronic health '
                         'conditions and injuries, as well as support people with '
-                        'disabilities. They utilise health education, behavioural '
+                        'disabilities, coach elite athletes and assist people '
+                        'of all ages to optimise their health. They utilise '
+                        'health education, behavioural '
                         'coaching and exercise prescription to improve lifestyle, '
                         'health and well-being.\n\n'
                         'Exercise Physiologists are recognised by Medicare, and '
@@ -67,7 +69,7 @@ class EPServices extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
                       child: Center(
                         child: Text(
-                          "NDIS",
+                          "National Disability Insurance Scheme (NDIS)",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.newsreader(
                             textStyle: headingStyle,
@@ -84,9 +86,9 @@ class EPServices extends StatelessWidget {
                         'make the experience as positive as possible. This starts '
                         'from the environment, as that is why we offer to come to '
                         'you, and provide our service in the comfort of your own '
-                        'home. Or, if preferred or more suitable we may recommend '
+                        'home. If preferred (or more appropriate) we may recommend '
                         'appointments at a gym or hydrotherapy pool.\n\n'
-                        'The specifics - Within an NDIS plan, Exercise Physiology '
+                        'Within an NDIS plan, Exercise Physiology '
                         'falls under Capacity Building, and can come from either '
                         'subcategory of Improved Health and Wellbeing, or Improved '
                         'Daily Living.\n\n'
@@ -96,14 +98,14 @@ class EPServices extends StatelessWidget {
                         'will be sent to you to review.\n\n'
                         'All initial appointments are minimum of 1.5 hours, with '
                         'up to 60 minutes face to face, and 30 mins of report '
-                        'writing and administration time (this often involves '
+                        'writing and administration time. (This often involves '
                         'contacting family, other support providers or support '
-                        'coordinators), as well as completing legal clinical '
-                        'notes.\n\n'
+                        'coordinators, as well as completing legal clinical '
+                        'notes).\n\n'
                         'Subsequent sessions are offered as follows:\n'
                         ' • Standard follow up - up to 40 minutes face to face, and '
-                        '5 minutes administration\n'
-                        ' • Extended follow up - up to 55 minutes and 5 minutes '
+                        'five minutes administration\n'
+                        ' • Extended follow up - up to 55 minutes and five minutes '
                         'administration',
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
@@ -114,7 +116,7 @@ class EPServices extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
                       child: Center(
                         child: Text(
-                          "Department of Veteran Affairs",
+                          "Department of Veteran Affairs (DVA)",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.newsreader(
                             textStyle: headingStyle,
@@ -129,8 +131,8 @@ class EPServices extends StatelessWidget {
                         'Tomorrow is able to provide Exercise Physiology services '
                         'tailored to your needs. We have a strong understanding of '
                         'the challenges veterans and their families can '
-                        'experience, and is excited to be offering services for '
-                        'these people in our community.',
+                        'experience, and is excited to be offering Department '
+                        'of Veteran Affairs supported health services.',
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
                         ),
@@ -151,7 +153,7 @@ class EPServices extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
                       child: Text(
-                        'Without a referral, Brighter Tomorrow offers gym and home '
+                        'Without a referral, Brighter Tomorrow offers gym and home-'
                         'based services.\n'
                         'Contact us to discuss your specific needs and how we can '
                         'help.',
