@@ -56,43 +56,43 @@ class AppDrawer extends StatelessWidget {
               () => Beamer.of(context).beamToNamed('/mentoring'),
             ),
             const Divider(),
-            buildListTile(
-              'About',
-              Icons.people,
-              () => Beamer.of(context).beamToNamed('/jas'),
-            ),
-            // ExpansionTile(
-            //   backgroundColor: kColor,
-            //   leading: const Icon(
-            //     Icons.info,
-            //     weight: 10,
-            //     size: 26,
-            //     color: secondaryColor,
-            //   ),
-            //   title: Text(
-            //     'About',
-            //     style: GoogleFonts.newsreader(textStyle: menuStyle),
-            //   ),
-            //   children: [
-            //     buildListTile(
-            //       'About Us',
-            //       Icons.people,
-            //       () => Beamer.of(context).beamToNamed('/about'),
-            //     ),
-            //     const Divider(),
-            //     buildListTile(
-            //       'About Jas',
-            //       Icons.person,
-            //       () => Beamer.of(context).beamToNamed('/jas'),
-            //     ),
-            //     const Divider(),
-            //     buildListTile(
-            //       'About Josh',
-            //       Icons.person,
-            //       () => Beamer.of(context).beamToNamed('/josh'),
-            //     ),
-            //   ],
+            // buildListTile(
+            //   'About',
+            //   Icons.people,
+            //   () => Beamer.of(context).beamToNamed('/jas'),
             // ),
+            ExpansionTile(
+              backgroundColor: kColor,
+              leading: const Icon(
+                Icons.info,
+                weight: 10,
+                size: 26,
+                color: secondaryColor,
+              ),
+              title: Text(
+                'About',
+                style: GoogleFonts.newsreader(textStyle: menuStyle),
+              ),
+              children: [
+                buildListTile(
+                  'About Us',
+                  Icons.people,
+                  () => Beamer.of(context).beamToNamed('/about'),
+                ),
+                const Divider(),
+                buildListTile(
+                  'About Jas',
+                  Icons.person,
+                  () => Beamer.of(context).beamToNamed('/jas'),
+                ),
+                const Divider(),
+                buildListTile(
+                  'About Josh',
+                  Icons.person,
+                  () => Beamer.of(context).beamToNamed('/josh'),
+                ),
+              ],
+            ),
             const Divider(),
             buildListTile(
               'Contact',

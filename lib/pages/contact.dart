@@ -3,9 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../widgets/display_box.dart';
+import '/widgets/display_box.dart';
 import '/widgets/custom_appbar.dart';
-
 import '/constants.dart';
 
 final Uri _linkedInUrl = Uri.parse(
@@ -31,7 +30,7 @@ void _sendEmail() {
     scheme: 'mailto',
     path: 'admin@brightertomorrow.com.au',
   );
-  launchUrl(emailLaunchUri); //await before launchUrl
+  launchUrl(emailLaunchUri);
 }
 
 class ContactPage extends StatelessWidget {
@@ -53,7 +52,6 @@ class ContactPage extends StatelessWidget {
             begin: Alignment.bottomRight,
             end: Alignment.topLeft,
           ),
-          // color: kColor,
         ),
         child: Center(
           child: SingleChildScrollView(

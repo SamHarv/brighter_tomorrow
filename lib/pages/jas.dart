@@ -1,5 +1,7 @@
 import 'package:brighter_tomorrow/widgets/display_box.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/constants.dart';
@@ -44,30 +46,14 @@ class Jas extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(32, 32, 32, 32),
-                      child: Image.asset(
-                        'images/jas.jpeg',
-                        fit: BoxFit.contain,
-                        height: 400.0,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'images/cooper.jpeg',
-                            fit: BoxFit.contain,
-                            height: 200.0,
-                          ),
-                          const SizedBox(width: 32),
-                          Image.asset(
-                            'images/odie.jpeg',
-                            fit: BoxFit.contain,
-                            height: 200.0,
-                          ),
-                        ],
+                      padding: const EdgeInsets.fromLTRB(32, 32, 32, 0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(32),
+                        child: Image.asset(
+                          'images/jas.jpeg',
+                          fit: BoxFit.contain,
+                          height: 400.0,
+                        ),
                       ),
                     ),
                     Padding(
@@ -112,44 +98,62 @@ class Jas extends StatelessWidget {
                             ? Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    'images/horse.jpeg',
-                                    fit: BoxFit.contain,
-                                    height: 200.0,
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(32),
+                                    child: Image.asset(
+                                      'images/horse.jpeg',
+                                      fit: BoxFit.contain,
+                                      height: 200.0,
+                                    ),
                                   ),
                                   const SizedBox(width: 32),
-                                  Image.asset(
-                                    'images/fire.jpeg',
-                                    fit: BoxFit.contain,
-                                    height: 200.0,
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(32),
+                                    child: Image.asset(
+                                      'images/fire.jpeg',
+                                      fit: BoxFit.contain,
+                                      height: 200.0,
+                                    ),
                                   ),
                                   const SizedBox(width: 32),
-                                  Image.asset(
-                                    'images/bicycle.jpeg',
-                                    fit: BoxFit.contain,
-                                    height: 200.0,
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(32),
+                                    child: Image.asset(
+                                      'images/bicycle.jpeg',
+                                      fit: BoxFit.contain,
+                                      height: 200.0,
+                                    ),
                                   ),
                                 ],
                               )
                             : Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    'images/horse.jpeg',
-                                    fit: BoxFit.contain,
-                                    height: 200.0,
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(32),
+                                    child: Image.asset(
+                                      'images/horse.jpeg',
+                                      fit: BoxFit.contain,
+                                      height: 200.0,
+                                    ),
                                   ),
                                   const SizedBox(height: 32),
-                                  Image.asset(
-                                    'images/fire.jpeg',
-                                    fit: BoxFit.contain,
-                                    height: 200.0,
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(32),
+                                    child: Image.asset(
+                                      'images/fire.jpeg',
+                                      fit: BoxFit.contain,
+                                      height: 200.0,
+                                    ),
                                   ),
                                   const SizedBox(height: 32),
-                                  Image.asset(
-                                    'images/bicycle.jpeg',
-                                    fit: BoxFit.contain,
-                                    height: 200.0,
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(32),
+                                    child: Image.asset(
+                                      'images/bicycle.jpeg',
+                                      fit: BoxFit.contain,
+                                      height: 200.0,
+                                    ),
                                   ),
                                 ],
                               )),

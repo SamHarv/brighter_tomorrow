@@ -24,7 +24,6 @@ class Josh extends StatelessWidget {
             begin: Alignment.bottomRight,
             end: Alignment.topLeft,
           ),
-          // color: kColor,
         ),
         child: Center(
           child: SingleChildScrollView(
@@ -44,10 +43,13 @@ class Josh extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(32, 32, 32, 0),
-                      child: Image.asset(
-                        'images/josh.jpeg',
-                        fit: BoxFit.contain,
-                        height: 400.0,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(32),
+                        child: Image.asset(
+                          'images/josh.jpeg',
+                          fit: BoxFit.contain,
+                          height: 400.0,
+                        ),
                       ),
                     ),
                     Padding(

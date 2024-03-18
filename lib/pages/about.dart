@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../widgets/display_box.dart';
+import '/widgets/display_box.dart';
 import '/constants.dart';
 import '/widgets/custom_appbar.dart';
 
@@ -24,7 +26,6 @@ class AboutPage extends StatelessWidget {
             begin: Alignment.bottomRight,
             end: Alignment.topLeft,
           ),
-          // color: kColor,
         ),
         child: Center(
           child: SingleChildScrollView(
@@ -44,10 +45,13 @@ class AboutPage extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(32),
-                      child: Image.asset(
-                        'images/together.jpeg',
-                        fit: BoxFit.contain,
-                        height: 400.0,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(32),
+                        child: Image.asset(
+                          'images/together.jpeg',
+                          fit: BoxFit.contain,
+                          height: 400.0,
+                        ),
                       ),
                     ),
                     Padding(
@@ -55,16 +59,22 @@ class AboutPage extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                            'images/cooper.jpeg',
-                            fit: BoxFit.contain,
-                            height: 200.0,
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(32),
+                            child: Image.asset(
+                              'images/cooper.jpeg',
+                              fit: BoxFit.contain,
+                              height: 200.0,
+                            ),
                           ),
                           const SizedBox(width: 32),
-                          Image.asset(
-                            'images/odie.jpeg',
-                            fit: BoxFit.contain,
-                            height: 200.0,
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(32),
+                            child: Image.asset(
+                              'images/odie.jpeg',
+                              fit: BoxFit.contain,
+                              height: 200.0,
+                            ),
                           ),
                         ],
                       ),
