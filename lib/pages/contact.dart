@@ -17,7 +17,7 @@ Future<void> _launchLinkedInUrl() async {
 }
 
 void _phoneCall() async {
-  final call = Uri.parse('tel: +16437381558');
+  final call = Uri.parse('tel: +16480799249');
   if (await canLaunchUrl(call)) {
     launchUrl(call);
   } else {
@@ -95,23 +95,23 @@ class ContactPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // Padding(
-                    //   padding: const EdgeInsets.only(
-                    //     left: 24,
-                    //     top: 8,
-                    //     right: 24,
-                    //     bottom: 12,
-                    //   ),
-                    //   child: TextButton(
-                    //     onPressed: _phoneCall,
-                    //     child: Text(
-                    //       '0437 381 558',
-                    //       style: GoogleFonts.newsreader(
-                    //         textStyle: bodyStyle,
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 24,
+                        top: 8,
+                        right: 24,
+                        bottom: 12,
+                      ),
+                      child: TextButton(
+                        onPressed: _phoneCall,
+                        child: Text(
+                          '0480 799 249',
+                          style: GoogleFonts.newsreader(
+                            textStyle: bodyStyle,
+                          ),
+                        ),
+                      ),
+                    ),
                     Padding(
                       padding: kPadding,
                       child: Wrap(
