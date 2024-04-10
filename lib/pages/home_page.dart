@@ -36,24 +36,12 @@ class HomePage extends StatelessWidget {
                   fit: BoxFit.contain,
                   height: 400.0,
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.fromLTRB(32, 16, 32, 0),
-                //   child: Center(
-                //     child: Text(
-                //       "Brighter Tomorrow Exercise Physiology",
-                //       textAlign: TextAlign.center,
-                //       style: GoogleFonts.newsreader(
-                //         textStyle: headingStyle,
-                //       ),
-                //     ),
-                //   ),
-                // ),
                 DisplayBox(children: [
                   Padding(
                     padding: const EdgeInsets.all(32),
                     child: Text(
                       'Welcome to Brighter Tomorrow Exercise Physiology, a '
-                      'service started by Jas Saunders to offer high '
+                      'service started by Jas and Josh Morrow to offer high '
                       'quality, personalised Exercise Physiology in the Albury/'
                       'Wodonga area.\n\n'
                       'At Brighter Tomorrow we prioritise our relationships with '

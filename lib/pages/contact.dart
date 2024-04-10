@@ -73,15 +73,69 @@ class ContactPage extends StatelessWidget {
                     ),
                     Padding(
                       padding: kPadding,
-                      child: Text(
-                        'Jas Saunders\n\n'
-                        // morrow
-                        'Brighter Tomorrow',
+                      child: RichText(
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.newsreader(
-                          textStyle: bodyStyle,
+                        text: TextSpan(
+                          style: GoogleFonts.newsreader(
+                            textStyle: bodyStyle,
+                          ),
+                          children: const [
+                            TextSpan(
+                              text: 'Jas Morrow',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextSpan(
+                              text:
+                                  '\n\nDirector | Senior Exercise Physiologist\n\n',
+                            ),
+                            TextSpan(
+                              text: 'Josh Morrow',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextSpan(
+                              text:
+                                  '\n\nDirector | Senior Exercise Physiologist',
+                            ),
+                          ],
                         ),
                       ),
+                    ),
+                    const Divider(
+                      color: Colors.grey,
+                      thickness: 1,
+                      indent: 24,
+                      endIndent: 24,
+                    ),
+                    Padding(
+                      padding: kPadding,
+                      child: RichText(
+                        text: TextSpan(
+                          style: GoogleFonts.newsreader(
+                            textStyle: bodyStyle,
+                          ),
+                          children: const [
+                            TextSpan(
+                              text: 'Brighter Tomorrow Exercise Physiology',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      // Text(
+                      //   'Brighter Tomorrow Exercise Physiology',
+                      //   style: GoogleFonts.newsreader(
+                      //     textStyle: const TextStyle(
+                      //       fontSize: 20,
+                      //       fontWeight: FontWeight.bold,
+                      //     ),
+                      //   ),
+                      // ),
                     ),
                     Padding(
                       padding: kPadding,
