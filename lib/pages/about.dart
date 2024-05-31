@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/widgets/display_box.dart';
@@ -35,14 +36,16 @@ class AboutPage extends StatelessWidget {
                 DisplayBox(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(32, 32, 32, 0),
-                      child: Text(
-                        "About Us",
-                        style: GoogleFonts.newsreader(
-                          textStyle: headingStyle,
-                        ),
-                      ),
-                    ),
+                        padding: const EdgeInsets.fromLTRB(32, 32, 32, 0),
+                        child: Text(
+                          "About Us",
+                          style: GoogleFonts.newsreader(
+                            textStyle: headingStyle,
+                          ),
+                        )
+                            .animate()
+                            .slide(duration: const Duration(seconds: 3))
+                            .fade(duration: const Duration(seconds: 3))),
                     Padding(
                       padding: const EdgeInsets.all(32),
                       child: ClipRRect(
@@ -52,7 +55,10 @@ class AboutPage extends StatelessWidget {
                           fit: BoxFit.contain,
                           height: 400.0,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 1))
+                        ..slideX(duration: const Duration(seconds: 3)).fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
@@ -77,7 +83,14 @@ class AboutPage extends StatelessWidget {
                             ),
                           ),
                         ],
-                      ),
+                      ).animate(delay: const Duration(seconds: 2))
+                        ..slideX(
+                                duration: const Duration(seconds: 3),
+                                begin: 0.5,
+                                end: 0)
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(32),
@@ -93,7 +106,14 @@ class AboutPage extends StatelessWidget {
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 3))
+                        ..slide(
+                                duration: const Duration(seconds: 3),
+                                begin: const Offset(0, 0.5),
+                                end: const Offset(0, 0))
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                   ],
                 ),

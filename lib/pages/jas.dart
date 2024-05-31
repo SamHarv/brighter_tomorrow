@@ -1,7 +1,6 @@
 import 'package:brighter_tomorrow/widgets/display_box.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/constants.dart';
@@ -43,7 +42,14 @@ class Jas extends StatelessWidget {
                         style: GoogleFonts.newsreader(
                           textStyle: headingStyle,
                         ),
-                      ),
+                      ).animate()
+                        ..slide(
+                                duration: const Duration(seconds: 3),
+                                begin: const Offset(0, 0.5),
+                                end: const Offset(0, 0))
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(32, 32, 32, 0),
@@ -54,7 +60,10 @@ class Jas extends StatelessWidget {
                           fit: BoxFit.contain,
                           height: 400.0,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 1))
+                        ..slideX(duration: const Duration(seconds: 3)).fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(32),
@@ -90,7 +99,14 @@ class Jas extends StatelessWidget {
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 2))
+                        ..slide(
+                                duration: const Duration(seconds: 3),
+                                begin: const Offset(0, 0.5),
+                                end: const Offset(0, 0))
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                         padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
@@ -126,6 +142,14 @@ class Jas extends StatelessWidget {
                                   ),
                                 ],
                               )
+                                .animate(delay: const Duration(seconds: 3))
+                                .slide(
+                                    duration: const Duration(seconds: 3),
+                                    begin: const Offset(0, 0.5),
+                                    end: const Offset(0, 0))
+                                .fade(
+                                  duration: const Duration(seconds: 3),
+                                )
                             : Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -136,7 +160,12 @@ class Jas extends StatelessWidget {
                                       fit: BoxFit.contain,
                                       height: 200.0,
                                     ),
-                                  ),
+                                  ).animate(delay: const Duration(seconds: 2))
+                                    ..slideX(
+                                      duration: const Duration(seconds: 3),
+                                    ).fade(
+                                      duration: const Duration(seconds: 3),
+                                    ),
                                   const SizedBox(height: 32),
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(32),
@@ -145,7 +174,15 @@ class Jas extends StatelessWidget {
                                       fit: BoxFit.contain,
                                       height: 200.0,
                                     ),
-                                  ),
+                                  ).animate(delay: const Duration(seconds: 3))
+                                    ..slideX(
+                                            duration:
+                                                const Duration(seconds: 3),
+                                            begin: 0.5,
+                                            end: 0)
+                                        .fade(
+                                      duration: const Duration(seconds: 3),
+                                    ),
                                   const SizedBox(height: 32),
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(32),
@@ -154,7 +191,13 @@ class Jas extends StatelessWidget {
                                       fit: BoxFit.contain,
                                       height: 200.0,
                                     ),
-                                  ),
+                                  ).animate(delay: const Duration(seconds: 4))
+                                    ..slideX(
+                                            duration:
+                                                const Duration(seconds: 3))
+                                        .fade(
+                                      duration: const Duration(seconds: 3),
+                                    ),
                                 ],
                               )),
                   ],

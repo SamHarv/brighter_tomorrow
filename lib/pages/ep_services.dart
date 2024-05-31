@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/display_box.dart';
@@ -42,7 +43,10 @@ class EPServices extends StatelessWidget {
                           style: GoogleFonts.newsreader(
                             textStyle: headingStyle,
                           ),
-                        ),
+                        )
+                            .animate()
+                            .slide(duration: const Duration(seconds: 3))
+                            .fade(duration: const Duration(seconds: 3)),
                       ),
                     ),
                     Padding(
@@ -63,7 +67,14 @@ class EPServices extends StatelessWidget {
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 1))
+                        ..slide(
+                                duration: const Duration(seconds: 3),
+                                begin: const Offset(0, 0.5),
+                                end: const Offset(0, 0))
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
@@ -74,7 +85,10 @@ class EPServices extends StatelessWidget {
                           style: GoogleFonts.newsreader(
                             textStyle: headingStyle,
                           ),
-                        ),
+                        )
+                            .animate(delay: const Duration(seconds: 2))
+                            .slide(duration: const Duration(seconds: 3))
+                            .fade(duration: const Duration(seconds: 3)),
                       ),
                     ),
                     Padding(
@@ -110,7 +124,14 @@ class EPServices extends StatelessWidget {
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 3))
+                        ..slide(
+                                duration: const Duration(seconds: 3),
+                                begin: const Offset(0, 0.5),
+                                end: const Offset(0, 0))
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
@@ -121,7 +142,10 @@ class EPServices extends StatelessWidget {
                           style: GoogleFonts.newsreader(
                             textStyle: headingStyle,
                           ),
-                        ),
+                        )
+                            .animate(delay: const Duration(seconds: 4))
+                            .slide(duration: const Duration(seconds: 3))
+                            .fade(duration: const Duration(seconds: 3)),
                       ),
                     ),
                     Padding(
@@ -136,7 +160,14 @@ class EPServices extends StatelessWidget {
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 5))
+                        ..slide(
+                                duration: const Duration(seconds: 3),
+                                begin: const Offset(0, 0.5),
+                                end: const Offset(0, 0))
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(32, 0, 32, 32),
@@ -147,7 +178,10 @@ class EPServices extends StatelessWidget {
                           style: GoogleFonts.newsreader(
                             textStyle: headingStyle,
                           ),
-                        ),
+                        )
+                            .animate(delay: const Duration(seconds: 6))
+                            .slide(duration: const Duration(seconds: 3))
+                            .fade(duration: const Duration(seconds: 3)),
                       ),
                     ),
                     Padding(
@@ -160,7 +194,14 @@ class EPServices extends StatelessWidget {
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 7))
+                        ..slide(
+                                duration: const Duration(seconds: 3),
+                                begin: const Offset(0, 0.5),
+                                end: const Offset(0, 0))
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                   ],
                 ),

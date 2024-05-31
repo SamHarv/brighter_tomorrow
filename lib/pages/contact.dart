@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -62,53 +63,64 @@ class ContactPage extends StatelessWidget {
                   children: [
                     gapH12,
                     Padding(
-                      padding: kPadding,
-                      child: Text(
-                        'Contact',
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.newsreader(
-                          textStyle: headingStyle,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: kPadding,
-                      child: RichText(
-                        textAlign: TextAlign.center,
-                        text: TextSpan(
+                        padding: kPadding,
+                        child: Text(
+                          'Contact',
+                          textAlign: TextAlign.center,
                           style: GoogleFonts.newsreader(
-                            textStyle: bodyStyle,
+                            textStyle: headingStyle,
                           ),
-                          children: const [
-                            TextSpan(
-                              text: 'Jas Morrow',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                        ).animate()
+                          ..slide(
+                            duration: const Duration(seconds: 3),
+                          ).fade(
+                            duration: const Duration(seconds: 3),
+                          )),
+                    Padding(
+                        padding: kPadding,
+                        child: RichText(
+                          textAlign: TextAlign.center,
+                          text: TextSpan(
+                            style: GoogleFonts.newsreader(
+                              textStyle: bodyStyle,
+                            ),
+                            children: const [
+                              TextSpan(
+                                text: 'Jas Morrow',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            TextSpan(
-                              text:
-                                  '\n\nDirector | Senior Exercise Physiologist\n\n',
-                            ),
-                            TextSpan(
-                              text: 'Josh Morrow',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                              TextSpan(
+                                text:
+                                    '\n\nDirector | Senior Exercise Physiologist\n\n',
                               ),
-                            ),
-                            TextSpan(
-                              text:
-                                  '\n\nDirector | Senior Exercise Physiologist',
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                              TextSpan(
+                                text: 'Josh Morrow',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              TextSpan(
+                                text:
+                                    '\n\nDirector | Senior Exercise Physiologist',
+                              ),
+                            ],
+                          ),
+                        ).animate(delay: const Duration(seconds: 1))
+                          ..slideX(
+                            duration: const Duration(seconds: 3),
+                          ).fade(
+                            duration: const Duration(seconds: 3),
+                          )),
                     const Divider(
                       color: Colors.grey,
                       thickness: 1,
                       indent: 24,
                       endIndent: 24,
+                    ),
+                    const SizedBox(
+                      height: 8,
                     ),
                     Padding(
                       padding: kPadding,
@@ -126,19 +138,20 @@ class ContactPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                      ),
-                      // Text(
-                      //   'Brighter Tomorrow Exercise Physiology',
-                      //   style: GoogleFonts.newsreader(
-                      //     textStyle: const TextStyle(
-                      //       fontSize: 20,
-                      //       fontWeight: FontWeight.bold,
-                      //     ),
-                      //   ),
-                      // ),
+                      ).animate(delay: const Duration(seconds: 2))
+                        ..slideX(
+                                duration: const Duration(seconds: 3),
+                                begin: 0.5,
+                                end: 0)
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
-                      padding: kPadding,
+                      padding: const EdgeInsets.only(
+                        left: 24,
+                        right: 24,
+                      ),
                       child: TextButton(
                         onPressed: _sendEmail,
                         child: Text(
@@ -147,14 +160,19 @@ class ContactPage extends StatelessWidget {
                             textStyle: bodyStyle,
                           ),
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 2))
+                        ..slideX(
+                                duration: const Duration(seconds: 3),
+                                begin: 0.5,
+                                end: 0)
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
                         left: 24,
-                        top: 8,
                         right: 24,
-                        bottom: 12,
                       ),
                       child: TextButton(
                         onPressed: _phoneCall,
@@ -164,51 +182,64 @@ class ContactPage extends StatelessWidget {
                             textStyle: bodyStyle,
                           ),
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 2))
+                        ..slideX(
+                                duration: const Duration(seconds: 3),
+                                begin: 0.5,
+                                end: 0)
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                     Padding(
-                      padding: kPadding,
-                      child: Wrap(
-                        direction: Axis.horizontal,
-                        alignment: WrapAlignment.center,
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        // mainAxisSize: MainAxisSize.min,
-                        children: [
-                          IconButton(
-                            icon: const FaIcon(
-                              FontAwesomeIcons.youtube,
-                              color: Colors.grey,
+                        padding: kPadding,
+                        child: Wrap(
+                          direction: Axis.horizontal,
+                          alignment: WrapAlignment.center,
+                          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          // mainAxisSize: MainAxisSize.min,
+                          children: [
+                            IconButton(
+                              icon: const FaIcon(
+                                FontAwesomeIcons.youtube,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {},
                             ),
-                            onPressed: () {},
-                          ),
-                          IconButton(
-                            icon: const FaIcon(FontAwesomeIcons.linkedinIn),
-                            onPressed: () => _launchLinkedInUrl(),
-                          ),
-                          IconButton(
-                            icon: const FaIcon(
-                              FontAwesomeIcons.twitter,
-                              color: Colors.grey,
+                            IconButton(
+                              icon: const FaIcon(FontAwesomeIcons.linkedinIn),
+                              onPressed: () => _launchLinkedInUrl(),
                             ),
-                            onPressed: () {},
-                          ),
-                          IconButton(
-                            icon: const FaIcon(
-                              FontAwesomeIcons.facebook,
-                              color: Colors.grey,
+                            IconButton(
+                              icon: const FaIcon(
+                                FontAwesomeIcons.twitter,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {},
                             ),
-                            onPressed: () {},
-                          ),
-                          IconButton(
-                            icon: const FaIcon(
-                              FontAwesomeIcons.instagram,
-                              color: Colors.grey,
+                            IconButton(
+                              icon: const FaIcon(
+                                FontAwesomeIcons.facebook,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {},
                             ),
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                    ),
+                            IconButton(
+                              icon: const FaIcon(
+                                FontAwesomeIcons.instagram,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {},
+                            ),
+                          ],
+                        ).animate(delay: const Duration(seconds: 3))
+                          ..slide(
+                                  duration: const Duration(seconds: 3),
+                                  begin: const Offset(0, 0.5),
+                                  end: const Offset(0, 0))
+                              .fade(
+                            duration: const Duration(seconds: 3),
+                          )),
                   ],
                 ),
               ],

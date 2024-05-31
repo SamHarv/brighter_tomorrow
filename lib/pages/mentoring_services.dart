@@ -1,5 +1,6 @@
 import 'package:brighter_tomorrow/widgets/display_box.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/constants.dart';
@@ -42,7 +43,10 @@ class MentoringServices extends StatelessWidget {
                           style: GoogleFonts.newsreader(
                             textStyle: headingStyle,
                           ),
-                        ),
+                        )
+                            .animate()
+                            .slide(duration: const Duration(seconds: 3))
+                            .fade(duration: const Duration(seconds: 3)),
                       ),
                     ),
                     Padding(
@@ -84,7 +88,14 @@ class MentoringServices extends StatelessWidget {
                         style: GoogleFonts.newsreader(
                           textStyle: bodyStyle,
                         ),
-                      ),
+                      ).animate(delay: const Duration(seconds: 1))
+                        ..slide(
+                                duration: const Duration(seconds: 3),
+                                begin: const Offset(0, 0.5),
+                                end: const Offset(0, 0))
+                            .fade(
+                          duration: const Duration(seconds: 3),
+                        ),
                     ),
                   ],
                 ),
