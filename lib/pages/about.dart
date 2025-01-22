@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,7 +19,7 @@ class AboutPage extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              kColor.withOpacity(0.6),
+              kColor.withValues(alpha: 0.6),
               kColor,
             ],
             begin: Alignment.bottomRight,

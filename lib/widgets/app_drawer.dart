@@ -91,6 +91,12 @@ class AppDrawer extends StatelessWidget {
                   Icons.person,
                   () => Beamer.of(context).beamToNamed('/josh'),
                 ),
+                const Divider(),
+                buildListTile(
+                  'About Ella',
+                  Icons.person,
+                  () => Beamer.of(context).beamToNamed('/ella'),
+                ),
               ],
             ),
             const Divider(),

@@ -19,7 +19,7 @@ class MentoringServices extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              kColor.withOpacity(0.6),
+              kColor.withValues(alpha: 0.6),
               kColor,
             ],
             begin: Alignment.bottomRight,

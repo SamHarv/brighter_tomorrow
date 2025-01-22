@@ -19,7 +19,7 @@ class Josh extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              kColor.withOpacity(0.6),
+              kColor.withValues(alpha: 0.6),
               kColor,
             ],
             begin: Alignment.bottomRight,
@@ -53,7 +53,7 @@ class Josh extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(32),
                           child: Image.asset(
-                            'images/josh.jpeg',
+                            'images/josh.jpg',
                             fit: BoxFit.contain,
                             height: 400.0,
                           ),

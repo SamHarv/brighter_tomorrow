@@ -28,6 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Center(
         child: mediaWidth < 750
             ? InkWell(
+                borderRadius: BorderRadius.circular(64),
                 child: CircleAvatar(
                   backgroundImage: AssetImage(
                     image,
@@ -86,6 +87,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                               value: '/josh',
                               child: Text(
                                 'Josh',
+                                style: GoogleFonts.newsreader(
+                                    textStyle: menuStyle),
+                              ),
+                            ),
+                            PopupMenuItem<String>(
+                              value: '/ella',
+                              child: Text(
+                                'Ella',
                                 style: GoogleFonts.newsreader(
                                     textStyle: menuStyle),
                               ),

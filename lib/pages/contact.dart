@@ -11,9 +11,27 @@ import '/constants.dart';
 final Uri _linkedInUrl = Uri.parse(
     'https://www.linkedin.com/company/brighter-tomorrow-exercise-physiology/');
 
+final Uri _facebookUrl =
+    Uri.parse('https://www.facebook.com/profile.php?id=61564030217642');
+
+final Uri _instagramUrl = Uri.parse(
+    'https://www.instagram.com/brightertomorrow_exphys?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==');
+
 Future<void> _launchLinkedInUrl() async {
   if (!await launchUrl(_linkedInUrl)) {
     throw 'Could not launch $_linkedInUrl';
+  }
+}
+
+Future<void> _launchFacebookUrl() async {
+  if (!await launchUrl(_facebookUrl)) {
+    throw 'Could not launch $_facebookUrl';
+  }
+}
+
+Future<void> _launchInstagramUrl() async {
+  if (!await launchUrl(_instagramUrl)) {
+    throw 'Could not launch $_instagramUrl';
   }
 }
 
@@ -47,7 +65,7 @@ class ContactPage extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              kColor.withOpacity(0.6),
+              kColor.withValues(alpha: 0.6),
               kColor,
             ],
             begin: Alignment.bottomRight,
@@ -199,37 +217,37 @@ class ContactPage extends StatelessWidget {
                           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           // mainAxisSize: MainAxisSize.min,
                           children: [
-                            IconButton(
-                              icon: const FaIcon(
-                                FontAwesomeIcons.youtube,
-                                color: Colors.grey,
-                              ),
-                              onPressed: () {},
-                            ),
+                            // IconButton(
+                            //   icon: const FaIcon(
+                            //     FontAwesomeIcons.youtube,
+                            //     color: Colors.grey,
+                            //   ),
+                            //   onPressed: () {},
+                            // ),
                             IconButton(
                               icon: const FaIcon(FontAwesomeIcons.linkedinIn),
                               onPressed: () => _launchLinkedInUrl(),
                             ),
-                            IconButton(
-                              icon: const FaIcon(
-                                FontAwesomeIcons.twitter,
-                                color: Colors.grey,
-                              ),
-                              onPressed: () {},
-                            ),
+                            // IconButton(
+                            //   icon: const FaIcon(
+                            //     FontAwesomeIcons.twitter,
+                            //     color: Colors.grey,
+                            //   ),
+                            //   onPressed: () {},
+                            // ),
                             IconButton(
                               icon: const FaIcon(
                                 FontAwesomeIcons.facebook,
-                                color: Colors.grey,
+                                // color: Colors.grey,
                               ),
-                              onPressed: () {},
+                              onPressed: () => _launchFacebookUrl(),
                             ),
                             IconButton(
                               icon: const FaIcon(
                                 FontAwesomeIcons.instagram,
-                                color: Colors.grey,
+                                // color: Colors.grey,
                               ),
-                              onPressed: () {},
+                              onPressed: () => _launchInstagramUrl(),
                             ),
                           ],
                         ).animate(delay: const Duration(seconds: 3))

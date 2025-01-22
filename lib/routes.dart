@@ -1,3 +1,4 @@
+import 'package:brighter_tomorrow/pages/ella.dart';
 import 'package:flutter/widgets.dart';
 import 'package:beamer/beamer.dart';
 
@@ -68,6 +69,14 @@ final routerDelegate = BeamerDelegate(
           type: BeamPageType.fadeTransition,
           title: 'Josh Morrow - Brighter Tomorrow',
           child: Josh(),
+        );
+      },
+      '/ella': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('ella'),
+          type: BeamPageType.fadeTransition,
+          title: 'Ella Baker - Brighter Tomorrow',
+          child: Ella(),
         );
       },
     },

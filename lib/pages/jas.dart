@@ -20,7 +20,7 @@ class Jas extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              kColor.withOpacity(0.6),
+              kColor.withValues(alpha: 0.6),
               kColor,
             ],
             begin: Alignment.bottomRight,
@@ -56,7 +56,7 @@ class Jas extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(32),
                         child: Image.asset(
-                          'images/jas.jpeg',
+                          'images/jas.jpg',
                           fit: BoxFit.contain,
                           height: 400.0,
                         ),

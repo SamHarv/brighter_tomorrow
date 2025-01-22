@@ -23,10 +23,9 @@ class MyApp extends StatelessWidget {
       routeInformationParser: BeamerParser(),
       title: 'Brighter Tomorrow',
       theme: ThemeData(
-        // colorScheme: ColorScheme.fromSeed(
-        //   seedColor: const Color.fromRGBO(108, 112, 88, 1),
-        //   background: kColor,
-        // ),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromRGBO(108, 112, 88, 1),
+        ),
         // scaffoldBackgroundColor: kColor,
         useMaterial3: true,
       ),
