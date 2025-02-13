@@ -53,8 +53,8 @@ class Ella extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(32),
                           child: Image.asset(
-                            'images/ella.jpg',
-                            fit: BoxFit.contain,
+                            'images/ella.png',
+                            fit: BoxFit.cover,
                             height: 400.0,
                           ),
                         ).animate(delay: const Duration(seconds: 1))

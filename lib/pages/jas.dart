@@ -56,8 +56,8 @@ class Jas extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(32),
                         child: Image.asset(
-                          'images/jas.jpg',
-                          fit: BoxFit.contain,
+                          'images/jas.png',
+                          fit: BoxFit.cover,
                           height: 400.0,
                         ),
                       ).animate(delay: const Duration(seconds: 1))

@@ -7,13 +7,42 @@ import '../widgets/display_box.dart';
 import '/constants.dart';
 import '/widgets/custom_appbar.dart';
 
-class EPServices extends StatelessWidget {
+class EPServices extends StatefulWidget {
   const EPServices({super.key});
 
   @override
+  State<EPServices> createState() => _EPServicesState();
+}
+
+class _EPServicesState extends State<EPServices> {
+  final List<String> imageList = [
+    'images/services_1.png',
+    'images/services_2.png',
+    'images/services_3.png',
+  ];
+
+  bool _imagesLoaded = false;
+  late CarouselSliderController? buttonCarouselController;
+
+  @override
+  void initState() {
+    super.initState();
+    buttonCarouselController = CarouselSliderController();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_imagesLoaded) {
+      _imagesLoaded = true;
+      for (var image in imageList) {
+        precacheImage(AssetImage(image), context);
+      }
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    CarouselSliderController buttonCarouselController =
-        CarouselSliderController();
     final mediaWidth = MediaQuery.sizeOf(context).width;
     final mediaHeight = MediaQuery.sizeOf(context).height;
     return Scaffold(
@@ -81,51 +110,65 @@ class EPServices extends StatelessWidget {
                           duration: const Duration(seconds: 3),
                         ),
                     ),
-                    CarouselSlider(
-                      items: [1, 2, 3].map((i) {
-                        return Builder(
-                          builder: (BuildContext context) {
-                            return SizedBox(
-                              width: MediaQuery.of(context).size.width,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(32),
-                                child: InkWell(
-                                  onTap: () {
-                                    showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return AlertDialog(
-                                            title: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(24),
-                                              child: Image.asset(
-                                                'images/services_$i.jpg',
-                                                height: mediaHeight < mediaWidth
-                                                    ? 600
-                                                    : null,
-                                              ),
-                                            ),
-                                            titlePadding:
-                                                const EdgeInsets.all(0),
-                                          );
-                                        });
-                                  },
-                                  child: Image.asset(
-                                    'images/services_$i.jpg',
+                    CarouselSlider.builder(
+                      itemCount: imageList.length,
+                      itemBuilder: (context, index, realIndex) =>
+                          ConstrainedBox(
+                        constraints: BoxConstraints(
+                          maxWidth: 800,
+                          minWidth: mediaWidth < 800 ? mediaWidth : 800,
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(32),
+                          child: InkWell(
+                            onTap: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: ClipRRect(
+                                    borderRadius: BorderRadius.circular(24),
+                                    child: Image.asset(
+                                      imageList[index],
+                                      height:
+                                          mediaHeight < mediaWidth ? 600 : null,
+                                      fit: BoxFit.contain,
+                                      errorBuilder:
+                                          (context, error, stackTrace) {
+                                        return Container(
+                                          color: Colors.grey[200],
+                                          child: const Center(
+                                            child: Text('Image not found'),
+                                          ),
+                                        );
+                                      },
+                                    ),
                                   ),
+                                  titlePadding: const EdgeInsets.all(0),
                                 ),
-                              ),
-                            );
-                          },
-                        );
-                      }).toList(),
+                              );
+                            },
+                            child: Image.asset(
+                              imageList[index],
+                              fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) {
+                                return Container(
+                                  color: Colors.grey[200],
+                                  child: const Center(
+                                    child: Text('Image not found'),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
                       carouselController: buttonCarouselController,
                       options: CarouselOptions(
                         enableInfiniteScroll: false,
                         enlargeCenterPage: true,
                         viewportFraction: 0.75,
-                        aspectRatio: 2,
-                        height: mediaWidth < 750 ? null : 400,
+                        aspectRatio: 16 / 9,
+                        height: mediaWidth < 750 ? null : 500,
                       ),
                     ).animate(delay: const Duration(seconds: 1))
                       ..slideX(
@@ -146,8 +189,8 @@ class EPServices extends StatelessWidget {
                                 const Color.fromRGBO(158, 162, 138, 1),
                               ),
                             ),
-                            onPressed: () =>
-                                buttonCarouselController.previousPage(
+                            onPressed: () => buttonCarouselController!
+                                .previousPage(
                                     duration: const Duration(milliseconds: 300),
                                     curve: Curves.linear),
                             child: const Text(
@@ -162,7 +205,7 @@ class EPServices extends StatelessWidget {
                                 const Color.fromRGBO(158, 162, 138, 1),
                               ),
                             ),
-                            onPressed: () => buttonCarouselController.nextPage(
+                            onPressed: () => buttonCarouselController!.nextPage(
                                 duration: const Duration(milliseconds: 300),
                                 curve: Curves.linear),
                             child: const Text(

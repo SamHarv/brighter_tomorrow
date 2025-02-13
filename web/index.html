@@ -1,4 +1,7 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+
+<head>
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -19,8 +22,10 @@
   <meta name="description" content="Exercise Physiologist based in Albury">
 
   <meta name="theme-color" content="#6C7058">
+  <meta name="flutter-rendering" content="html">
 
-  <meta name="keywords" content="Brighter Tomorrow, Exercise Physiology, Exercise Physiologist, Exercise, Physio, Physiology, Physiologist, Health, Healthcare, Physiotherapist, fitness, training, Albury, Wodonga, Tallangatta">
+  <meta name="keywords"
+    content="Brighter Tomorrow, Exercise Physiology, Exercise Physiologist, Exercise, Physio, Physiology, Physiologist, Health, Healthcare, Physiotherapist, fitness, training, Albury, Wodonga, Tallangatta">
 
   <meta name="author" content="Brighter Tomorrow">
   <meta property="og:title" content="Brighter Tomorrow">
@@ -41,12 +46,12 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = null;
+    { { flutter_service_worker_version } }
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer=""></script>
-  
-  
+
+
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   <style id="splash-screen-style">
     html {
@@ -57,7 +62,7 @@
       margin: 0;
       min-height: 100%;
       background-color: #6C7058;
-          background-size: 100% 100%;
+      background-size: 100% 100%;
     }
 
     .center {
@@ -70,19 +75,22 @@
     }
 
     .contain {
-      display:block;
-      width:100%; height:100%;
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
     }
 
     .stretch {
-      display:block;
-      width:100%; height:100%;
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     .cover {
-      display:block;
-      width:100%; height:100%;
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -114,22 +122,29 @@
     }
   </script>
 </head>
+
 <body>
   <picture id="splash">
-      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
-      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
-      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
+    <source
+      srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x"
+      media="(prefers-color-scheme: light)">
+    <source
+      srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x"
+      media="(prefers-color-scheme: dark)">
+    <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
   </picture>
-  
+
+  <script src="flutter_bootstrap.js" async></script>
+
   <script>
-    window.addEventListener('load', function(ev) {
+    window.addEventListener('load', function (ev) {
       // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
+      _flutter.loader.load({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
             appRunner.runApp();
           });
         }
@@ -138,4 +153,6 @@
   </script>
 
 
-</body></html>
+</body>
+
+</html>
