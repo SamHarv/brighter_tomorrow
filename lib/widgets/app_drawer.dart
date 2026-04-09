@@ -75,18 +75,6 @@ class AppDrawer extends StatelessWidget {
               ),
               children: [
                 buildListTile(
-                  'About Us',
-                  Icons.people,
-                  () => Beamer.of(context).beamToNamed('/about'),
-                ),
-                const Divider(),
-                buildListTile(
-                  'About Jas',
-                  Icons.person,
-                  () => Beamer.of(context).beamToNamed('/jas'),
-                ),
-                const Divider(),
-                buildListTile(
                   'About Josh',
                   Icons.person,
                   () => Beamer.of(context).beamToNamed('/josh'),

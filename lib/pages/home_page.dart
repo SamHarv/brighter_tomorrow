@@ -15,12 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<String> imageList = [
-    'images/home_1.png',
-    'images/home_2.png',
-    'images/home_3.png',
-    'images/home_4.png'
-  ];
+  final List<String> imageList = ['images/home_3.png', 'images/home_4.png'];
 
   bool _imagesLoaded = false;
   late CarouselSliderController? buttonCarouselController;
@@ -81,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.all(32),
                         child: Text(
                           'Welcome to Brighter Tomorrow Exercise Physiology, a '
-                          'service started by Jas and Josh Morrow to offer high '
+                          'service run by Josh Morrow to offer high '
                           'quality, personalised Exercise Physiology in the Albury/'
                           'Wodonga area.\n\n'
                           'At Brighter Tomorrow we prioritise our relationships with '

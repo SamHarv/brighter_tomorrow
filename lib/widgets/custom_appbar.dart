@@ -68,22 +68,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                         itemBuilder: (BuildContext context) {
                           return [
                             PopupMenuItem<String>(
-                              value: '/about',
-                              child: Text(
-                                'About Us',
-                                style: GoogleFonts.newsreader(
-                                    textStyle: menuStyle),
-                              ),
-                            ),
-                            PopupMenuItem<String>(
-                              value: '/jas',
-                              child: Text(
-                                'Jas',
-                                style: GoogleFonts.newsreader(
-                                    textStyle: menuStyle),
-                              ),
-                            ),
-                            PopupMenuItem<String>(
                               value: '/josh',
                               child: Text(
                                 'Josh',

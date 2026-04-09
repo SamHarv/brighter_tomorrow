@@ -8,26 +8,26 @@ import '/widgets/display_box.dart';
 import '/widgets/custom_appbar.dart';
 import '/constants.dart';
 
-final Uri _linkedInUrl = Uri.parse(
-    'https://www.linkedin.com/company/brighter-tomorrow-exercise-physiology/');
+// final Uri _linkedInUrl = Uri.parse(
+//     'https://www.linkedin.com/company/brighter-tomorrow-exercise-physiology/');
 
-final Uri _facebookUrl =
-    Uri.parse('https://www.facebook.com/profile.php?id=61564030217642');
+// final Uri _facebookUrl =
+//     Uri.parse('https://www.facebook.com/profile.php?id=61564030217642');
 
 final Uri _instagramUrl = Uri.parse(
     'https://www.instagram.com/brightertomorrow_exphys?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==');
 
-Future<void> _launchLinkedInUrl() async {
-  if (!await launchUrl(_linkedInUrl)) {
-    throw 'Could not launch $_linkedInUrl';
-  }
-}
+// Future<void> _launchLinkedInUrl() async {
+//   if (!await launchUrl(_linkedInUrl)) {
+//     throw 'Could not launch $_linkedInUrl';
+//   }
+// }
 
-Future<void> _launchFacebookUrl() async {
-  if (!await launchUrl(_facebookUrl)) {
-    throw 'Could not launch $_facebookUrl';
-  }
-}
+// Future<void> _launchFacebookUrl() async {
+//   if (!await launchUrl(_facebookUrl)) {
+//     throw 'Could not launch $_facebookUrl';
+//   }
+// }
 
 Future<void> _launchInstagramUrl() async {
   if (!await launchUrl(_instagramUrl)) {
@@ -103,16 +103,6 @@ class ContactPage extends StatelessWidget {
                               textStyle: bodyStyle,
                             ),
                             children: const [
-                              TextSpan(
-                                text: 'Jas Morrow',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              TextSpan(
-                                text:
-                                    '\n\nDirector | Senior Exercise Physiologist\n\n',
-                              ),
                               TextSpan(
                                 text: 'Josh Morrow',
                                 style: TextStyle(
@@ -224,10 +214,10 @@ class ContactPage extends StatelessWidget {
                             //   ),
                             //   onPressed: () {},
                             // ),
-                            IconButton(
-                              icon: const FaIcon(FontAwesomeIcons.linkedinIn),
-                              onPressed: () => _launchLinkedInUrl(),
-                            ),
+                            // IconButton(
+                            //   icon: const FaIcon(FontAwesomeIcons.linkedinIn),
+                            //   onPressed: () => _launchLinkedInUrl(),
+                            // ),
                             // IconButton(
                             //   icon: const FaIcon(
                             //     FontAwesomeIcons.twitter,
@@ -235,13 +225,13 @@ class ContactPage extends StatelessWidget {
                             //   ),
                             //   onPressed: () {},
                             // ),
-                            IconButton(
-                              icon: const FaIcon(
-                                FontAwesomeIcons.facebook,
-                                // color: Colors.grey,
-                              ),
-                              onPressed: () => _launchFacebookUrl(),
-                            ),
+                            // IconButton(
+                            //   icon: const FaIcon(
+                            //     FontAwesomeIcons.facebook,
+                            //     // color: Colors.grey,
+                            //   ),
+                            //   onPressed: () => _launchFacebookUrl(),
+                            // ),
                             IconButton(
                               icon: const FaIcon(
                                 FontAwesomeIcons.instagram,

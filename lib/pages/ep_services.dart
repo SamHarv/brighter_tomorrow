@@ -16,7 +16,6 @@ class EPServices extends StatefulWidget {
 
 class _EPServicesState extends State<EPServices> {
   final List<String> imageList = [
-    'images/services_1.png',
     'images/services_2.png',
     'images/services_3.png',
   ];

@@ -55,14 +55,6 @@ final routerDelegate = BeamerDelegate(
           child: MentoringServices(),
         );
       },
-      '/jas': (context, state, data) {
-        return const BeamPage(
-          key: ValueKey('jas'),
-          type: BeamPageType.fadeTransition,
-          title: 'Jas Morrow - Brighter Tomorrow',
-          child: Jas(),
-        );
-      },
       '/josh': (context, state, data) {
         return const BeamPage(
           key: ValueKey('josh'),
